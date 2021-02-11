@@ -1,4 +1,4 @@
-package com.app.pagamentos.infraestrutura.servicos;
+package com.app.pagamentos.infraestrutura;
 
 public class ServicosDePagamentoApi {
 

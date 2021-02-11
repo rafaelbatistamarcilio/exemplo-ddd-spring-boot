@@ -1,6 +1,6 @@
 package com.app.pagamentos.dominio.transacao;
 
-import com.app.compartilhado.dominio.interfaces.ObjetoDeValor;
+import com.app.compartilhado.dominio.interfaces.IObjetoDeValor;
 
-public class LogTransacao implements ObjetoDeValor {
+public class LogTransacaoVo implements IObjetoDeValor {
 }

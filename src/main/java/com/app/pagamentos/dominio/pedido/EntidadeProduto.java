@@ -1,10 +1,10 @@
 package com.app.pagamentos.dominio.pedido;
 
-import com.app.compartilhado.dominio.interfaces.Entidade;
+import com.app.compartilhado.dominio.interfaces.IEntidade;
 
 import java.math.BigDecimal;
 
-public class Produto implements Entidade {
+public class EntidadeProduto implements IEntidade {
 
     private Long identificador;
     private String descricao;

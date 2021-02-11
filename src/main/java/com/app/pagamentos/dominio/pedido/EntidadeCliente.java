@@ -1,25 +1,26 @@
-package com.app.pagamentos.dominio.cliente;
+package com.app.pagamentos.dominio.pedido;
 
 import com.app.compartilhado.dominio.EnderecoVo;
-import com.app.compartilhado.dominio.interfaces.IAgregado;
+import com.app.compartilhado.dominio.interfaces.IEntidade;
+import com.app.pagamentos.dominio.transacao.CartaoDeCreditoVo;
 
 import java.util.Date;
+import java.util.List;
 
-public class EntidadeCliente implements IAgregado {
+public class EntidadeCliente implements IEntidade {
 
     private String nome;
     private String cpf;
     private Date dataNascimento;
     private String telefone;
-    private EnderecoVo enderecoVoCobranca;
     private EnderecoVo enderecoVoEnvio;
+    private List<CartaoDeCreditoVo> cartoes;
 
     public EntidadeCliente(String nome, String cpf, Date dataNascimento, String telefone, EnderecoVo enderecoVoCobranca, EnderecoVo enderecoVoEnvio) {
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
         this.telefone = telefone;
-        this.enderecoVoCobranca = enderecoVoCobranca;
         this.enderecoVoEnvio = enderecoVoEnvio;
     }
 
@@ -53,14 +54,6 @@ public class EntidadeCliente implements IAgregado {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
-    }
-
-    public EnderecoVo getEnderecoCobranca() {
-        return enderecoVoCobranca;
-    }
-
-    public void setEnderecoCobranca(EnderecoVo enderecoVoCobranca) {
-        this.enderecoVoCobranca = enderecoVoCobranca;
     }
 
     public EnderecoVo getEnderecoEnvio() {

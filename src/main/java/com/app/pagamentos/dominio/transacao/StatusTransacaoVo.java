@@ -1,14 +1,14 @@
 package com.app.pagamentos.dominio.transacao;
 
-import com.app.compartilhado.dominio.interfaces.ObjetoDeValor;
+import com.app.compartilhado.dominio.interfaces.IObjetoDeValor;
 
-public class StatusTransacao implements ObjetoDeValor {
+public class StatusTransacaoVo implements IObjetoDeValor {
 
     private Long id;
     private String descricao;
     private String motivo;
 
-    public StatusTransacao(Long id, String descricao, String motivo) {
+    public StatusTransacaoVo(Long id, String descricao, String motivo) {
         this.id = id;
         this.descricao = descricao;
         this.motivo = motivo;

@@ -1,13 +1,13 @@
 package com.app.pagamentos.dominio.pedido;
 
-import com.app.compartilhado.dominio.interfaces.Entidade;
+import com.app.compartilhado.dominio.interfaces.IEntidade;
 
 import java.math.BigDecimal;
 
-public class ItemPedido implements Entidade {
+public class EntidadeItemPedido implements IEntidade {
 
     private Long identificador;
-    private Produto produto;
+    private EntidadeProduto produto;
     private Long quantidade;
     private BigDecimal valorTotal;
 
@@ -19,11 +19,11 @@ public class ItemPedido implements Entidade {
         this.identificador = identificador;
     }
 
-    public Produto getProduto() {
+    public EntidadeProduto getProduto() {
         return produto;
     }
 
-    public void setProduto(Produto produto) {
+    public void setProduto(EntidadeProduto produto) {
         this.produto = produto;
     }
 

@@ -1,8 +1,8 @@
 package com.app.compartilhado.dominio;
 
-import com.app.compartilhado.dominio.interfaces.ObjetoDeValor;
+import com.app.compartilhado.dominio.interfaces.IObjetoDeValor;
 
-public class Endereco implements ObjetoDeValor {
+public class EnderecoVo implements IObjetoDeValor {
 
     private String rua;
     private Long numero;
@@ -11,7 +11,7 @@ public class Endereco implements ObjetoDeValor {
     private String cidade;
     private String complemento;
 
-    public Endereco(String rua, Long numero, Long cep, String bairro, String cidade, String complemento) {
+    public EnderecoVo(String rua, Long numero, Long cep, String bairro, String cidade, String complemento) {
         this.rua = rua;
         this.numero = numero;
         this.cep = cep;

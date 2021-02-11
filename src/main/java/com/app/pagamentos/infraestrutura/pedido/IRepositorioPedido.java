@@ -1,2 +1,4 @@
-package com.app.pagamentos.infraestrutura.pedido;public class IRepositorioPedido {
+package com.app.pagamentos.infraestrutura.pedido;
+
+public interface IRepositorioPedido {
 }

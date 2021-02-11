@@ -1,21 +1,22 @@
 package com.app.pagamentos.dominio.pedido;
 
-import com.app.compartilhado.dominio.interfaces.Agregado;
+import com.app.compartilhado.dominio.interfaces.IAgregado;
 
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-public class Pedido implements Agregado {
+public class AgregadoPedido implements IAgregado {
 
     private Long numeroPedido;
-    private List<ItemPedido> itens;
+    private List<EntidadeItemPedido> itens;
     private BigDecimal valorTotal;
     private BigDecimal frete;
-    private StatusPedido status;
+    private StatusPedidoVo status;
     private Date dataRealizacao;
+    private EntidadeCliente cliente;
 
-    public Pedido(Long numeroPedido, List<ItemPedido> itens, BigDecimal valorTotal, BigDecimal frete, StatusPedido status, Date dataRealizacao) {
+    public AgregadoPedido(Long numeroPedido, List<EntidadeItemPedido> itens, BigDecimal valorTotal, BigDecimal frete, StatusPedidoVo status, Date dataRealizacao) {
         this.numeroPedido = numeroPedido;
         this.itens = itens;
         this.valorTotal = valorTotal;
@@ -24,12 +25,12 @@ public class Pedido implements Agregado {
         this.dataRealizacao = dataRealizacao;
     }
 
-    public void adicionarItem(ItemPedido item) {
+    public void adicionarItem(EntidadeItemPedido item) {
         itens.add(item);
         valorTotal = valorTotal.add(item.getValorTotal());
     }
 
-    public void removerItem(ItemPedido item) {
+    public void removerItem(EntidadeItemPedido item) {
         itens.remove(item);
         valorTotal = valorTotal.subtract(item.getValorTotal());
     }
@@ -40,7 +41,7 @@ public class Pedido implements Agregado {
     }
 
 
-    public void atualizarStatus(StatusPedido novoStatus) {
+    public void atualizarStatus(StatusPedidoVo novoStatus) {
         status = novoStatus;
         //TODO: lancar evento caso o pagamento seja aprovado
     }
@@ -53,11 +54,11 @@ public class Pedido implements Agregado {
         this.numeroPedido = numeroPedido;
     }
 
-    public List<ItemPedido> getItens() {
+    public List<EntidadeItemPedido> getItens() {
         return itens;
     }
 
-    public void setItens(List<ItemPedido> itens) {
+    public void setItens(List<EntidadeItemPedido> itens) {
         this.itens = itens;
     }
 
@@ -77,11 +78,11 @@ public class Pedido implements Agregado {
         this.frete = frete;
     }
 
-    public StatusPedido getStatus() {
+    public StatusPedidoVo getStatus() {
         return status;
     }
 
-    public void setStatus(StatusPedido status) {
+    public void setStatus(StatusPedidoVo status) {
         this.status = status;
     }
 

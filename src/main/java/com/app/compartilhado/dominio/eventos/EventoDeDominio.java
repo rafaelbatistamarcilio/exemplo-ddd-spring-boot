@@ -1,4 +1,4 @@
-package com.app.compartilhado.dominio;
+package com.app.compartilhado.dominio.eventos;
 
 public class EventoDeDominio {
 

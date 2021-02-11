@@ -1,13 +1,13 @@
 package com.app.pagamentos.dominio.pedido;
 
-import com.app.compartilhado.dominio.interfaces.ObjetoDeValor;
+import com.app.compartilhado.dominio.interfaces.IObjetoDeValor;
 
-public class StatusPedido implements ObjetoDeValor {
+public class StatusPedidoVo implements IObjetoDeValor {
 
     private Long id;
     private String descricao;
 
-    public StatusPedido(Long id, String descricao) {
+    public StatusPedidoVo(Long id, String descricao) {
         this.id = id;
         this.descricao = descricao;
     }

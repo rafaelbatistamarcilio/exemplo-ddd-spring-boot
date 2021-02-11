@@ -1,11 +1,11 @@
 package com.app.pagamentos.dominio.transacao;
 
-import com.app.compartilhado.dominio.interfaces.ObjetoDeValor;
+import com.app.compartilhado.dominio.interfaces.IObjetoDeValor;
 
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class BoletoBancario implements FormaPagamento, ObjetoDeValor {
+public class BoletoBancarioVo implements FormaPagamento, IObjetoDeValor {
 
     private String codigoBanco;
     private String codigoDeBarras;

@@ -1,2 +1,7 @@
-package com.app.pagamentos.infraestrutura.transacao;public class SituacaoTransacao {
+package com.app.pagamentos.infraestrutura.transacao;
+
+import javax.persistence.Entity;
+
+@Entity
+public class SituacaoTransacao {
 }
