@@ -1,8 +1,8 @@
 package com.app.compartilhado.dominio;
 
-import com.app.compartilhado.dominio.interfaces.IObjetoDeValor;
+import com.app.compartilhado.dominio.interfaces.IValueObject;
 
-public class EnderecoVo implements IObjetoDeValor {
+public class EnderecoVo implements IValueObject {
 
     private String rua;
     private Long numero;

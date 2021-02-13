@@ -1,8 +1,6 @@
 package com.app.pagamentos.dominio.transacao;
 
-import com.app.compartilhado.dominio.interfaces.IObjetoDeValor;
-
-public class StatusTransacaoVo implements IObjetoDeValor {
+public class StatusTransacaoVo {
 
     private Long id;
     private String descricao;

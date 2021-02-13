@@ -1,6 +1,6 @@
 package com.app.pagamentos.infraestrutura;
 
-public class ServicosDePagamentoApi {
+public class ApiPagamentoService {
 
     public void efetuarPagamento() {}
 }
