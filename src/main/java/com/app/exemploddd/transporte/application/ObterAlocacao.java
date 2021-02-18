@@ -1,7 +1,7 @@
 package com.app.exemploddd.transporte.application;
 
 import com.app.exemploddd.transporte.domain.entidades.Alocacao;
-import com.app.exemploddd.transporte.domain.ports.output.IAlocacaoRepository;
+import com.app.exemploddd.transporte.domain.ports.IAlocacaoRepository;
 
 public class ObterAlocacao {
     

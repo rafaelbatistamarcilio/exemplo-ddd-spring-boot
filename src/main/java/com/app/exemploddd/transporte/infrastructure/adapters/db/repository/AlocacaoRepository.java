@@ -3,7 +3,7 @@ package com.app.exemploddd.transporte.infrastructure.adapters.db.repository;
 import java.util.ArrayList;
 
 import com.app.exemploddd.transporte.domain.entidades.Alocacao;
-import com.app.exemploddd.transporte.domain.ports.output.IAlocacaoRepository;
+import com.app.exemploddd.transporte.domain.ports.IAlocacaoRepository;
 
 import org.springframework.stereotype.Repository;
 
@@ -41,5 +41,11 @@ public class AlocacaoRepository implements IAlocacaoRepository {
 
         com.app.exemploddd.transporte.infrastructure.adapters.db.projections.Alocacao alocacao = result.get();
         return new Alocacao(alocacao.getId(), alocacao.getIdPedido());
+    }
+
+    @Override
+    public void registrarEntrega(Long alocacao) {
+        // TODO alterar o status da alocação
+
     }
 }

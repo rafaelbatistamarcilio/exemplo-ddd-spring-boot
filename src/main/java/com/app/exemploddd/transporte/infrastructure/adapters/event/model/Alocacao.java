@@ -1,4 +1,4 @@
-package com.app.exemploddd.transporte.infrastructure.adapters.event.transporte.model;
+package com.app.exemploddd.transporte.infrastructure.adapters.event.model;
 public class Alocacao {
     
     public Long id;
