@@ -11,7 +11,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @Configuration
 public class PagamentosBeanConfig {
 
-    @Bean(name = "applicationEventMulticaster")
+    @Bean(name = "applicationEventMulticasterPagamentos")
     public ApplicationEventMulticaster simpleApplicationEventMulticaster() {
         SimpleApplicationEventMulticaster eventMulticaster =
                 new SimpleApplicationEventMulticaster();
