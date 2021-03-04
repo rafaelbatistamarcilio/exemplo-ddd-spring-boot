@@ -3,6 +3,8 @@ package com.app.exemploddd.pagamentos.infraestrutura.pedido;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Transient;
+
 import java.math.BigDecimal;
 
 @Entity
@@ -11,6 +13,8 @@ public class ItemPedido {
     @Id
     @GeneratedValue
     private Long id;
+
+    @Transient
     private Produto produto;
     private Long quantidade;
     private BigDecimal valorTotal;

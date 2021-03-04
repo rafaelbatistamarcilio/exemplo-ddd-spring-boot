@@ -28,7 +28,8 @@ public class OrdemCompra implements Serializable {
     @JsonFormat(pattern = "dd/MM/yyyy hh:mm")
     private Date data;
 
-    @OneToMany(mappedBy = "id.pedido")
+    // @OneToMany(mappedBy = "pedido")
+    @Transient
     private Set<ItemOrdemCompra> itens = new HashSet<>();
 
 }
