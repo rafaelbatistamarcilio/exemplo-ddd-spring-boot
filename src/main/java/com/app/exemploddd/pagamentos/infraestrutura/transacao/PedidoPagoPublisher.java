@@ -14,6 +14,10 @@ public class PedidoPagoPublisher {
     }
 
     public void notificaEventoPedidoPago(Transacao transacao) {
-        publisher.publishEvent(new PedidoPagoEvent(transacao));
+        try {
+            publisher.publishEvent(new PedidoPagoEvent(transacao));
+        } catch (Exception e) {
+            // TODO: exception
+        }
     }
 }
