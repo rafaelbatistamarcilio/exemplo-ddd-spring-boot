@@ -1,0 +1,33 @@
+version: '3'
+services:
+  database-mysql:
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=exemploddd
+      - MYSQL_USER=crane
+      - MYSQL_PASSWORD=1234
+    networks:
+      - my_network
+
+  exemploddd:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: marcelojunin/exemploddd
+    ports:
+      - 8081:8080
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://database-mysql:3306/exemploddd?useSSL=false
+    depends_on:
+      - database-mysql
+    networks:
+      - my_network
+    links:
+      - database-mysql
+
+networks:
+  my_network:
+    driver: bridge
