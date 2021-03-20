@@ -1,6 +1,6 @@
 package com.app.exemploddd.ordemCompra.dominio.event;
 
-import com.app.exemploddd.ordemCompra.dominio.entity.OrdemCompra;
+import com.app.exemploddd.ordemCompra.dominio.modelo.OrdemCompra;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;

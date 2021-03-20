@@ -1,5 +1,7 @@
 package com.app.exemploddd.pagamentos.infraestrutura.pedido;
 
+import com.app.exemploddd.shared.entities.Produto;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;

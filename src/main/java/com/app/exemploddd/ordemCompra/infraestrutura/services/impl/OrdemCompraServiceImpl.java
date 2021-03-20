@@ -1,9 +1,9 @@
 package com.app.exemploddd.ordemCompra.infraestrutura.services.impl;
 
-import com.app.exemploddd.ordemCompra.dominio.entity.Entrega;
-import com.app.exemploddd.ordemCompra.dominio.entity.OrdemCompra;
-import com.app.exemploddd.ordemCompra.dominio.entity.Pagamento;
+import com.app.exemploddd.ordemCompra.dominio.modelo.Entrega;
+import com.app.exemploddd.ordemCompra.dominio.modelo.Pagamento;
 import com.app.exemploddd.ordemCompra.dominio.event.OrdemCompraEventPublisher;
+import com.app.exemploddd.ordemCompra.infraestrutura.persistencia.entidade.OrdemCompra;
 import com.app.exemploddd.ordemCompra.infraestrutura.persistencia.repositorio.OrdemCompraRepository;
 import com.app.exemploddd.ordemCompra.infraestrutura.services.OrdemCompraService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class OrdemCompraServiceImpl implements OrdemCompraService {
     @Override
     public void enviaAoFinanceiro(final OrdemCompra ordemCompra) {
         ordemCompraRepository.save(ordemCompra);
-        ordemCompraEventPublisher.publishOrdemCompraEvent(ordemCompra);
+        ordemCompraEventPublisher.publishOrdemCompraEvent(ordemCompra.fromModel());
     }
 
     @Override

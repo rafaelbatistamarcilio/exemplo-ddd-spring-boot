@@ -50,12 +50,4 @@ public class BeansConfig {
     public RegistrarEntrega getRegistrarEntrega() {
         return new RegistrarEntrega(this.alocacaoPublisher, this.alocacaoRepository);
     }
-
-    @Bean(name = "applicationEventMulticaster")
-    public ApplicationEventMulticaster simpleApplicationEventMulticaster() {
-        SimpleApplicationEventMulticaster eventMulticaster = new SimpleApplicationEventMulticaster();
-
-        eventMulticaster.setTaskExecutor(new SimpleAsyncTaskExecutor());
-        return eventMulticaster;
-    }
 }
