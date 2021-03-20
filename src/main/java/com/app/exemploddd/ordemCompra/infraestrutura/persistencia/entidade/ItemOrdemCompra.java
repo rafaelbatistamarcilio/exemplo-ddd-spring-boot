@@ -1,4 +1,4 @@
-package com.app.exemploddd.ordemCompra.infraestrutura.persistencia.mapeamento;
+package com.app.exemploddd.ordemCompra.infraestrutura.persistencia.entidade;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
@@ -26,4 +26,8 @@ public class ItemOrdemCompra implements Serializable {
     private Integer quantidade;
     private Double preco;
 
+    @JsonIgnore
+    public OrdemCompra getOrdemCompra() {
+        return id.getOrdemCompra();
+    }
 }

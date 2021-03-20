@@ -1,8 +1,8 @@
 package com.app.exemploddd.ordemCompra.infraestrutura.services;
 
-import com.app.exemploddd.ordemCompra.dominio.entity.Entrega;
-import com.app.exemploddd.ordemCompra.dominio.entity.OrdemCompra;
-import com.app.exemploddd.ordemCompra.dominio.entity.Pagamento;
+import com.app.exemploddd.ordemCompra.dominio.modelo.Entrega;
+import com.app.exemploddd.ordemCompra.dominio.modelo.Pagamento;
+import com.app.exemploddd.ordemCompra.infraestrutura.persistencia.entidade.OrdemCompra;
 
 public interface OrdemCompraService {
     void enviaAoFinanceiro(OrdemCompra ordemCompra);

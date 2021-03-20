@@ -1,5 +1,6 @@
-package com.app.exemploddd.ordemCompra.infraestrutura.persistencia.mapeamento;
+package com.app.exemploddd.shared.entities;
 
+import com.app.exemploddd.ordemCompra.infraestrutura.persistencia.entidade.ItemOrdemCompra;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,9 +9,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @AllArgsConstructor
@@ -33,3 +32,4 @@ public class Produto implements Serializable {
     private Set<ItemOrdemCompra> itens = new HashSet<>();
 
 }
+

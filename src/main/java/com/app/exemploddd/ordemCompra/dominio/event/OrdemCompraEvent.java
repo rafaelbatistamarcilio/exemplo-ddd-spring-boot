@@ -1,6 +1,6 @@
 package com.app.exemploddd.ordemCompra.dominio.event;
 
-import com.app.exemploddd.ordemCompra.dominio.entity.OrdemCompra;
+import com.app.exemploddd.ordemCompra.dominio.modelo.OrdemCompra;
 import lombok.Getter;
 import org.springframework.context.ApplicationEvent;
 

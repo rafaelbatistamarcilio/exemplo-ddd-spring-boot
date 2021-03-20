@@ -1,4 +1,4 @@
-package com.app.exemploddd.ordemCompra.dominio.entity;
+package com.app.exemploddd.ordemCompra.dominio.modelo;
 
 import lombok.NoArgsConstructor;
 

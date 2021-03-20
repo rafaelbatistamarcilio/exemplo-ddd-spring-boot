@@ -1,4 +1,4 @@
-package com.app.exemploddd.ordemCompra.infraestrutura.persistencia.mapeamento;
+package com.app.exemploddd.ordemCompra.infraestrutura.persistencia.entidade;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
@@ -21,14 +21,16 @@ public class OrdemCompra implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seqPedido")
-    @SequenceGenerator(name = "seqPedido", sequenceName = "seq_id_pedido")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @JsonFormat(pattern = "dd/MM/yyyy hh:mm")
     private Date data;
 
-    @OneToMany(mappedBy = "id.pedido")
+    @OneToMany(mappedBy = "id.ordemCompra")
     private Set<ItemOrdemCompra> itens = new HashSet<>();
 
+    public com.app.exemploddd.ordemCompra.dominio.modelo.OrdemCompra fromModel() {
+        return new com.app.exemploddd.ordemCompra.dominio.modelo.OrdemCompra();
+    }
 }

@@ -1,6 +1,6 @@
 package com.app.exemploddd.ordemCompra.infraestrutura.persistencia.repositorio;
 
-import com.app.exemploddd.ordemCompra.dominio.entity.OrdemCompra;
+import com.app.exemploddd.ordemCompra.infraestrutura.persistencia.entidade.OrdemCompra;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

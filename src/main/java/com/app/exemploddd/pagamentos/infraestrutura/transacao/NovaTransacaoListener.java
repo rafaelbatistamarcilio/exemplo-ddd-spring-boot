@@ -1,6 +1,6 @@
 package com.app.exemploddd.pagamentos.infraestrutura.transacao;
 
-import com.app.exemploddd.pagamentos.dominio.pedido.PedidoCriadoEvent;
+import com.app.exemploddd.shared.domain.DomainEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
 public class NovaTransacaoListener {
 
     @Async
-    @EventListener(value = PedidoCriadoEvent.class)
-    public void onApplicationEvent(PedidoCriadoEvent eventoPedidoCriado) {
-        System.out.println("Evento Recebido: " + eventoPedidoCriado.getTipo());
+    @EventListener(value = DomainEvent.class, condition = "#evento.type=='PEDIDO_CRIADO'")
+    public void onApplicationEvent(DomainEvent evento) {
+        System.out.println("Evento Recebido: " + evento.getType());
         try {
             System.out.println("Criando nova transacao... ");
             Thread.sleep(5000);
